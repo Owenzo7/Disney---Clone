@@ -4,7 +4,12 @@ import styled from 'styled-components'
 function Header() {
   return (
     <Nav>
-        Header
+        <Logo src="" />
+
+          <NavMenu>
+
+
+          </NavMenu>
         </Nav>
   )
 }
@@ -12,10 +17,18 @@ function Header() {
 export default Header
 
 
-const Nav = styled.div`
-
-height:70px;
+const Nav = styled.nav`
+height: 70px;
 background: #090b13;
+
+`
+
+const Logo = styled.img`
+width:80px;
+
+`
+
+const NavMenu = styled.div`
 
 
 `

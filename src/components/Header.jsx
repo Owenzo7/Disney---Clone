@@ -17,11 +17,24 @@ function Header() {
             <span>SEARCH</span>
             </a>
             <a>
-            <img src="/images/search-icon.svg" alt="" />
-            <span>SEARCH</span>
+            <img src="/images/watchlist-icon.svg" alt="" />
+            <span>WATCHLIST</span>
             </a>
-
+            <a>
+            <img src="/images/original-icon.svg" alt="" />
+            <span>ORIGINALS</span>
+            </a>
+            <a>
+            <img src="/images/movie-icon.svg" alt="" />
+            <span>MOVIES</span>
+            </a>
+            <a>
+            <img src="/images/series-icon.svg" alt="" />
+            <span>SERIES</span>
+            </a>
           </NavMenu>
+
+          <UserImg src="/images/6bbb24f5-8b3c-4f53-a0b5-168194f57a0c.jpg"/>
         </Nav>
   )
 }
@@ -45,12 +58,16 @@ width:80px;
 
 const NavMenu = styled.div`
 display: flex;
+flex: 1;
+margin-left:20px;
+align-items: center;
 
 a{
 
   display: flex;
   align-items: center;
   padding: 0 12px;
+  cursor: pointer;
 
   img{
 
@@ -61,6 +78,41 @@ a{
 
     font-size: 13px;
     letter-spacing:1.4 2px; 
+    position: relative;
+
+
+    &:after{
+
+      content: "";
+      height:2px;
+      background:white;
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:-6px;
+      opacity:0;
+      transform-origin: left center;
+      transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+      transform:scaleX(0); 
+    }
+  }
+
+  &:hover{
+
+    span:after{
+
+      transform: scaleX(1);
+       opacity:1;
+    }
   }
 }
+`
+
+const UserImg = styled.img`
+
+width: 48px;
+height:48px;
+border-radius:50%;
+cursor: pointer;
+
 `

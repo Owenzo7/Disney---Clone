@@ -39,6 +39,7 @@ const Carousel = styled(Slider)`
 
 margin-top: 20px;
 
+
 ul li button {
 
     &:before{

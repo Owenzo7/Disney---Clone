@@ -29,11 +29,25 @@ function Detail() {
 
                               <GroupWatchButton>
 
-
+                                  <img src="/images/group-icon.png"  />
                               </GroupWatchButton>
 
 
                           </Controls>
+
+                                    <SubTitle>
+
+                                        2018 • 7m • Family, Fantasy, Kids, Animation
+                                          </SubTitle>
+
+                                                    <Description>
+
+                                                          A Chinese mom who's sad when her grown
+                                                          son leaves home gets another chance at
+                                                          motherhood when one of her dumplings springs
+                                                          to life. But she finds that nothing stays cute
+                                                          and small forever.
+                                                          </Description>
     </Container>
   )
 }
@@ -84,6 +98,7 @@ img{
 
 const Controls = styled.div`
   display: flex;
+  align-items: center;
 
 `
 
@@ -115,19 +130,45 @@ const TrailerButton = styled(PlayButton)`
 
 `
 const AddButton = styled.button`
+  margin-right: 16px;
   width:44px;
   height:44px;
   display: flex;
   align-items:center;
+  justify-content: center;
+  border-radius:50%;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor:pointer;
+
   span{
 
     font-size:30px;
+    color:white;
 
 
   }
 
 `
-const GroupWatchButton= styled.button`
-  
+const GroupWatchButton= styled(AddButton)`
+ background: rgb(0, 0, 0); 
 
+`
+
+
+const SubTitle = styled.div`
+
+color:rgb(249, 249, 249);
+font-size: 15px;
+min-height: 20px;
+margin-top: 26px;
+
+`
+
+const Description = styled.div`
+
+ line-height: 1.4;
+ font-size: 20px;
+ margin-top: 16px;
+ color: rgb(249, 249, 249);
 `
